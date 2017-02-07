@@ -1,6 +1,9 @@
 extends /blocks/layout-default/layout-default
+include /blocks/form/form
 
 block head
-	- var pageTitle = 'CSSSR Project Template';
+	- var pageTitle = 'Дело Иванова Вадима';
 
 block content
+	+e.container
+		+form(action="/")
