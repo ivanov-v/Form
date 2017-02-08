@@ -1,2 +1,11 @@
+include ../input/input
+
 mixin form()
 	+b('form').form&attributes(attributes)
+		+e.HEADER.header
+			+e.A.logo(href="http://csssr.ru/", target="_blank")
+				+e.IMG.logo-image(src="./assets/images/logo.png", alt="Лого CSSSR")
+			+e.IMG.title(src="./assets/images/form-title.png", width="221", height="118", alt="Дело")
+			+e.IMG.stamp(src="./assets/images/stamp.png", alt="Секретно. Заполнено собственноручно")
+
+		+input('text', 'Иванов Вадим Николаевич')
