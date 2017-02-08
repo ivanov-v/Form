@@ -12,9 +12,24 @@ mixin form()
 			+e.item
 				+b.field
 					+e.LABEL.label(for="name") Полное ФИО
-					+e.INPUT.input.input(id="name", type="text", name="name", value="Иванов Иван Иванович")
+					+e.INPUT.input.input(id="name", type="text", name="name", value="Иванов Вадим Николаевич")
 
 			+e.item
 				+b.field
 					+e.LABEL.label(for="year") Год рождения
-					+e.INPUT.input.input(id="year", type="text", name="year", value="1990")
+					+e.INPUT.input.input(id="year", type="text", name="year", value="1994")
+
+			+e.item
+				+b.field
+					+e.LABEL.label(for="location") Место жительства
+					+e.INPUT.input.input(id="location", type="text", name="location", value="г. Кстово, Россия")
+
+			+e.item
+				+b.field
+					+e.LABEL.label(for="skype") Скайп
+					+e.INPUT.input.input(id="skype", type="text", name="skype", value="dynamite_sfera")
+
+			+e.item
+				+b.field
+					+e.LABEL.label(for="email") Почта
+					+e.INPUT.input.input(id="email", type="email", name="skype", value="sferamail33@yandex.ru")
