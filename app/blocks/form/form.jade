@@ -12,9 +12,9 @@ mixin form()
 			+e.item
 				+b.field
 					+e.LABEL.label(for="name") Полное ФИО
-					+e.INPUT.input.input#name(type="text", name="name", value="Иванов Иван Иванович")
+					+e.INPUT#name.input.input(type="text", name="name", value="Иванов Иван Иванович")
 
 			+e.item
 				+b.field
 					+e.LABEL.label(for="year") Год рождения
-					+e.INPUT.input.input#year(type="text", name="year", value="1990")
+					+e.INPUT#year.input.input(type="text", name="year", value="1990")
