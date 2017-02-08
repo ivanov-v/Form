@@ -1,2 +1,15 @@
 .field
-	display block
+	display flex
+	align-items flex-end
+
+	&__label
+		margin-right 16px
+		padding-bottom 2px
+		font-size 22px
+		flex-shrink 0
+		font-weight 700
+		color $color-text-accent
+
+	&__input
+		flex-grow 1
+		flex-basis 0

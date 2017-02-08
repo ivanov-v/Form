@@ -1,11 +1,20 @@
 include ../input/input
 
 mixin form()
-	+b('form').form&attributes(attributes)
+	+b.FORM.form&attributes(attributes)
 		+e.HEADER.header
 			+e.A.logo(href="http://csssr.ru/", target="_blank")
 				+e.IMG.logo-image(src="./assets/images/logo.png", alt="Лого CSSSR")
-			+e.IMG.title(src="./assets/images/form-title.png", width="221", height="118", alt="Дело")
+			+e.H1.title Дело
 			+e.IMG.stamp(src="./assets/images/stamp.png", alt="Секретно. Заполнено собственноручно")
 
-		+input('text', 'Иванов Вадим Николаевич')
+		+b.fields
+			+e.item
+				+b.field
+					+e.LABEL.label(for="name") Полное ФИО
+					+e.INPUT.input.input#name(type="text", name="name", value="Иванов Иван Иванович")
+
+			+e.item
+				+b.field
+					+e.LABEL.label(for="year") Год рождения
+					+e.INPUT.input.input#year(type="text", name="year", value="1990")
