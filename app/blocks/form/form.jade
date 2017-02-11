@@ -8,28 +8,41 @@ mixin form()
 			+e.H1.title Дело
 			+e.IMG.stamp(src="./assets/images/stamp.png", alt="Секретно. Заполнено собственноручно")
 
-		+b.fields
-			+e.item
-				+b.field
-					+e.LABEL.label(for="name") Полное ФИО
-					+e.INPUT.input.input(id="name", type="text", name="name", value="Иванов Вадим Николаевич")
+		+b.SECTION.section.__section-fields
+			+b.fields
+				+e.item
+					+b.field
+						+e.LABEL.label(for="name") Полное ФИО
+						+b.INPUT.input.__input(id="name", type="text", name="name", value="Иванов Вадим Николаевич")
 
-			+e.item
-				+b.field
-					+e.LABEL.label(for="year") Год рождения
-					+e.INPUT.input.input(id="year", type="text", name="year", value="1994")
+				+e.item
+					+b.field
+						+e.LABEL.label(for="year") Год рождения
+						+b.INPUT.input.__input(id="year", type="text", name="year", value="1994")
 
-			+e.item
-				+b.field
-					+e.LABEL.label(for="location") Место жительства
-					+e.INPUT.input.input(id="location", type="text", name="location", value="г. Кстово, Россия")
+				+e.item
+					+b.field
+						+e.LABEL.label(for="location") Место жительства
+						+b.INPUT.input.__input(id="location", type="text", name="location", value="г. Кстово, Россия")
 
-			+e.item
-				+b.field
-					+e.LABEL.label(for="skype") Скайп
-					+e.INPUT.input.input(id="skype", type="text", name="skype", value="dynamite_sfera")
+				+e.item
+					+b.field
+						+e.LABEL.label(for="skype") Скайп
+						+b.INPUT.input.__input(id="skype", type="text", name="skype", value="dynamite_sfera")
 
-			+e.item
-				+b.field
-					+e.LABEL.label(for="email") Почта
-					+e.INPUT.input.input(id="email", type="email", name="skype", value="sferamail33@yandex.ru")
+				+e.item
+					+b.field
+						+e.LABEL.label(for="email") Почта
+						+b.INPUT.input.__input(id="email", type="email", name="skype", value="sferamail33@yandex.ru")
+
+		+b.SECTION.section.__hjjhgjh
+			+e.HEADER.header
+				+b.H3.title.__title Расскажите о себе чекбоксами
+				+e.text
+					p Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+			br
+			br
+			+b.LABEL.control
+				+e.INPUT.native(type="checkbox", name="about")
+				+e.indicator
+				| БЭМ/OOCSS
