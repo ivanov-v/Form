@@ -1,0 +1,56 @@
+.control
+	position relative
+	padding-left 26px
+	display block
+	font-size 21px
+	font-weight 700
+	line-height 1.2
+	color #000
+
+	&_radio
+		padding-left 33px
+		font-size 20px
+
+		.control__indicator
+			top 0
+			sprite ($radio_border)
+
+			&::after
+				top 8px
+				left 8px
+				sprite ($radio_check)
+
+	&__native
+		position absolute
+		margin -1px
+		padding 0
+		overflow hidden
+		clip rect(0 0 0 0)
+		width 1px
+		height 1px
+		white-space nowrap
+		clip-path inset(100%)
+		border none
+
+		&:checked
+			& + .control__indicator
+				&::after
+					transform scale(1)
+					opacity 1
+
+	&__indicator
+		position absolute
+		top 5px
+		left 0
+		display block
+		sprite ($checkbox_border)
+
+		&::after
+			position absolute
+			top 3px
+			left 3px
+			content ''
+			sprite ($checkbox_check)
+			opacity 0
+			transform scale(.3)
+			transition all .2s
