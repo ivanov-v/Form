@@ -171,4 +171,7 @@ mixin form()
 		+b.SECTION.section.__section-js
 			+e.HEADER.header
 				+b.H3.title.__title Уровень владения JavaScript
-			.slider.slider-js-level
+			.slider.slider-js-level(data-for="js-level-input")
+			input#js-level-input(type="hidden", name="js-level")
+
+		input(type="submit", value="fdsfds")

@@ -1,6 +1,10 @@
 import noUiSlider from 'nouislider';
 
 const slider = document.querySelector('.slider-js-level');
+const sliderInput = document.querySelector('#js-level-input');
+
+const sliderValues = ['Не владею', 'Использую готовые решения', 'Использую готовые решения и умею их переделывать',
+'Пишу сложный JS с нуля'];
 
 const sliderConfig = {
 	start: 50,
@@ -8,19 +12,16 @@ const sliderConfig = {
 	range: {
 		min: 0,
 		'19%': 19,
-		'49%': 50,
+		'49%': 49,
 		max: 100
 	},
 	pips: {
-		mode: 'values',
-		values: [0, 19, 50, 100],
-		density: 100,
-		stepped: true
+		mode: 'steps',
+		density: 100
 	}
 };
 
-const sliderValues = ['Не владею', 'Использую готовые решения', 'Использую готовые решения и умею их переделывать',
-'Пишу сложный JS с нуля'];
+
 
 const applySliderValues = function (sliderNode, values) {
 	const valueNodes = [].slice.call(sliderNode.querySelectorAll('.noUi-value-large'));
@@ -34,3 +35,7 @@ const applySliderValues = function (sliderNode, values) {
 
 noUiSlider.create(slider, sliderConfig);
 applySliderValues(slider, sliderValues);
+
+slider.noUiSlider.on('update', values => {
+	sliderInput.value = parseInt(values[0], 10);
+});
