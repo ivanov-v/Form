@@ -40,16 +40,132 @@ mixin form()
 				+b.H3.title.__title Расскажите о себе чекбоксами
 				+e.text
 					p Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
-			br
-			br
-			+b.LABEL.control
-				+e.INPUT.native(type="checkbox", name="about")
-				+e.indicator
-				| БЭМ/OOCSS
 
-			br
-			br
-			+b.LABEL.control._radio
-				+e.INPUT.native(type="radio", name="about")
-				+e.indicator
-				| Верстать
+			+b.row
+				+e.col
+					+b.UL.controls
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="bem/oocss", checked)
+								+e.indicator
+								| БЭМ/OOCSS
+
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="pug", checked)
+								+e.indicator
+								| Pug (Jade)
+
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="Stylus,LESS,SASS", checked)
+								+e.indicator
+								| Stylus/LESS/SASS
+
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="SVG", checked)
+								+e.indicator
+								| Работаю с SVG
+
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="semantics", checked)
+								+e.indicator
+								| Верстаю семантично
+
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="accessibility")
+								+e.indicator
+								| Accessibility (A11Y)
+
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="ES2015/ES2016", checked)
+								+e.indicator
+								| ES2015/ES2016
+
+				+e.col
+					+b.UL.controls
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="Gulp/GRUNT", checked)
+								+e.indicator
+								| Gulp/GRUNT
+
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="Webpack", checked)
+								+e.indicator
+								| Webpack
+
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="WebGL")
+								+e.indicator
+								| Дружу с WebGL
+
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="jQuery", checked)
+								+e.indicator
+								| jQuery
+
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="Angular")
+								+e.indicator
+								| Знаю/изучаю Angular
+
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="React", checked)
+								+e.indicator
+								| Знаю/изучаю React
+
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="Node.js", checked)
+								+e.indicator
+								| Знаю/изучаю Node.js
+
+				+e.col
+					+b.UL.controls
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="Git", checked)
+								+e.indicator
+								| Использую Git
+
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="eye", checked)
+								+e.indicator
+								| С глазомером всё ок
+
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="blog", checked)
+								+e.indicator
+								| Читаю #[a.link(href="http://blog.csssr.ru/") blog.csssr.ru]
+
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="laziness", checked)
+								+e.indicator
+								| Я ленивый(-ая)
+
+						+e.LI.item
+							+b.LABEL.control
+								+e.INPUT.native(type="checkbox", name="about", value="English")
+								+e.indicator
+								| У меня хороший английский
+
+
+			//- br
+			//- br
+			//- +b.LABEL.control._radio
+			//- 	+e.INPUT.native(type="radio", name="about")
+			//- 	+e.indicator
+			//- 	| Верстать
