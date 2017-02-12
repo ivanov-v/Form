@@ -18,7 +18,7 @@ const applySliderValues = function (sliderNode, values) {
 };
 
 noUiSlider.create(slider, {
-	start: 0,
+	start: 50,
 	snap: true,
 	range: {
 		min: 0,
