@@ -1,0 +1,74 @@
+.slider
+	position relative
+	height 6px
+	background-image url('../images/line.png')
+	background-position 0 -26px
+
+	.noUi
+		&-base
+			position relative
+			z-index 1
+			width 100%
+			height 100%
+			transform translate3d(0, 0, 0)
+
+		&-origin
+			position absolute
+			width 0
+			height 0
+
+		&-handle
+			position relative
+			top -15px
+			left -9px
+			sprite ($slider_handle)
+
+		&-pips
+			position absolute
+			top 4px
+			left 0
+			width 100%
+
+			&::before
+				position absolute
+				top 0
+				left 0
+				width 2px
+				height 24px
+				content ''
+				background-color #41261f
+
+			&::after
+				position absolute
+				top 0
+				right 0
+				width 2px
+				height 24px
+				content ''
+				background-color #41261f
+
+		&-marker
+			position absolute
+			top 0
+			margin-left -2px
+			width 2px
+			height 10px
+			background-color #41261f
+
+			&:first-child
+				display none
+
+		&-value-large
+			position absolute
+			top -30px
+			left 0
+			padding-top 58px
+			max-width 170px
+			font-size 13px
+			font-weight 700
+			cursor pointer
+			color #2f1b15
+
+			&:last-child
+				right 0
+				left auto !important
