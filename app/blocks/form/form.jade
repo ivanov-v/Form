@@ -35,11 +35,10 @@ mixin form()
 						+e.LABEL.label(for="email") Почта
 						+b.INPUT.input.__input(id="email", type="email", name="skype", value="sferamail33@yandex.ru")
 
-		+b.SECTION.section.__hjjhgjh
+		+b.SECTION.section.__section-about
 			+e.HEADER.header
 				+b.H3.title.__title Расскажите о себе чекбоксами
-				+e.text
-					p Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+				+e.P.text Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
 
 			+b.row
 				+e.col
@@ -148,7 +147,7 @@ mixin form()
 							+b.LABEL.control
 								+e.INPUT.native(type="checkbox", name="about", value="blog", checked)
 								+e.indicator
-								| Читаю #[a.link(href="http://blog.csssr.ru/") blog.csssr.ru]
+								| Читаю #[a.link(href="http://blog.csssr.ru/", target="_blank") blog.csssr.ru]
 
 						+e.LI.item
 							+b.LABEL.control
@@ -168,3 +167,10 @@ mixin form()
 			//- 	+e.INPUT.native(type="radio", name="about")
 			//- 	+e.indicator
 			//- 	| Верстать
+
+		+b.SECTION.section.__section-js
+			+e.HEADER.header
+				+b.H3.title.__title Уровень владения JavaScript
+			br
+			br
+			.slider
