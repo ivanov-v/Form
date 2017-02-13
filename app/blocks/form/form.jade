@@ -161,17 +161,50 @@ mixin form()
 								+e.indicator
 								| У меня хороший английский
 
-			//- br
-			//- br
-			//- +b.LABEL.control._radio
-			//- 	+e.INPUT.native(type="radio", name="about")
-			//- 	+e.indicator
-			//- 	| Верстать
-
 		+b.SECTION.section.__section-js
 			+e.HEADER.header
 				+b.H3.title.__title Уровень владения JavaScript
 			.slider.slider-js-level(data-for="js-level-input")
 			input#js-level-input(type="hidden", name="js-level")
 
-		input(type="submit", value="fdsfds")
+		+b.SECTION.section.__section-about-words
+			+e.HEADER.header
+				+b.H3.title.__title Расскажите о себе словами
+				+e.P.text Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
+
+			+b.TEXTAREA.textarea(name="about-words").
+				Вы профессиональная команда, занимающаяся разработкой сложных и интересных проектов. Работа с вами позволит мне выйти на новый уровень и постигнуть Дзэн. А еще это поле автоматически растягивается :D
+
+		+b.SECTION.section
+			+e.HEADER.header._small
+				+b.H3.title.__title Какие у вас планы на будущее?
+				+e.P.text Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+			+b.UL.controls._line
+				+e.LI.item
+					+b.LABEL.control._radio
+						+e.INPUT.native(type="radio", name="plans", value="layout")
+						+e.indicator
+						| Верстать
+
+				+e.LI.item
+					+b.LABEL.control._radio
+						+e.INPUT.native(type="radio", name="plans", value="js", checked)
+						+e.indicator
+						| Прокачиваться в JS
+
+				+e.LI.item
+					+b.LABEL.control._radio
+						+e.INPUT.native(type="radio", name="plans", value="manager")
+						+e.indicator
+						| Менеджерство
+
+				+e.LI.item
+					+b.LABEL.control._radio
+						+e.INPUT.native(type="radio", name="plans", value="other")
+						+e.indicator
+						| Другое
+
+		+e.FOOTER.footer
+			+b.field
+				+e.LABEL.label(for="date") Дата заполенения
+				+b.INPUT.input.__input._fit(id="date", type="text", name="date", value="13.02.2017")
