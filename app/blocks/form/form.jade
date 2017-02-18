@@ -163,7 +163,7 @@ mixin form()
 		+b.SECTION.section.__section-slider
 			+e.HEADER.header
 				+b.H3.title.__title Уровень владения JavaScript
-			.slider.slider-js-level(data-for="js-level-input")
+			.slider.slider-js-level
 			input#js-level-input(type="hidden", name="js-level")
 
 		+b.SECTION.section.__section-about-words
@@ -172,9 +172,8 @@ mixin form()
 				+e.P.text Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
 
 			+b.TEXTAREA.textarea(name="about-words").
-				Вы профессиональная команда, занимающаяся разработкой сложных и интересных проектов. Работа с вами позволит мне выйти на новый уровень и постигнуть Дзэн. А еще это поле автоматически растягивается :D
-
-		+b.SECTION.section
+				Я занимаюсь разработкой клиентской части веб-приложений. Вы, как мне известно, тоже. И делаете это на высоком уровне. Работая с вами, я готов выполнять сложные и интересные задачи, что позволит мне выйти на новый уровень и постигнуть Дзэн. А еще это поле автоматически растягивается :D
+		+b.SECTION.section.section__future
 			+e.HEADER.header._small
 				+b.H3.title.__title Какие у вас планы на будущее?
 				+e.P.text Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
@@ -206,4 +205,4 @@ mixin form()
 		+e.FOOTER.footer
 			+b.field
 				+e.LABEL.label(for="date") Дата заполенения
-				+b.INPUT.input.__input._fit(id="date", type="text", name="date", value="13.02.2017")
+				+b.INPUT.input.__input._fit(id="date", type="text", name="date", value="18.02.2017")

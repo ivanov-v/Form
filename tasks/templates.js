@@ -30,7 +30,7 @@ gulp.task('templates', () => (
 			indentInnerHtml: true,
 			preserveNewlines: true,
 			endWithNewline: true,
-			wrapLineLength: 120,
+			wrapLineLength: 750,
 			maxPreserveNewlines: 50,
 			wrapAttributesIndentSize: 1,
 			unformatted: ['use']
