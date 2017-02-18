@@ -8,7 +8,7 @@ export default () => {
 	'Пишу сложный JS с нуля'];
 
 	const sliderConfig = {
-		start: 50,
+		start: 49,
 		snap: true,
 		range: {
 			min: 0,
