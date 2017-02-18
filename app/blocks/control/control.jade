@@ -1,5 +1,3 @@
 mixin control()
-	+b.LABEL.control
-		+e.INPUT.native(type="checkbox", name="about", value="bem/oocss", checked)&attributes(attributes)
-		+e.indicator
-		| БЭМ/OOCSS
+	+b.control&attributes(attributes)
+		block
