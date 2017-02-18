@@ -4,9 +4,8 @@ mixin form()
 	+b.FORM.form&attributes(attributes)
 		+e.HEADER.header
 			+e.A.logo(href="http://csssr.ru/", target="_blank")
-				+e.IMG.logo-image(src="./assets/images/logo.png", alt="Лого CSSSR")
 			+e.H1.title Дело
-			+e.IMG.stamp(src="./assets/images/stamp.png", alt="Секретно. Заполнено собственноручно")
+			+e.stamp
 
 		+b.SECTION.section.__section-fields
 			+b.fields
